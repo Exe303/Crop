@@ -2,18 +2,32 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ############MDX NETWORK#############
-#Getting
-IZIN=$( curl https://raw.githubusercontent.com/kmardhex/perizinan/main/ip.txt | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/mardhex"
-echo -e "${NC}${LIGHT}WhatsApp : 085648505113"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/kangmardhex"
-exit 0
-fi
+GitUser="perizinan" 
+ 
+# // MY IPVPS 
+export MYIP=$(curl -sS ipv4.icanhazip.com) 
+ 
+# // GETTING 
+VALIDITY () { 
+    today=date -d "0 days" +"%Y-%m-%d" 
+    Exp1=$(curl -sS https://raw.githubusercontent.com/kmardhex/izin/main/ipvps.conf | grep $MYIP | awk '{print $3}') 
+    if [[ $today < $Exp1 ]]; then 
+    echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m" 
+    else 
+    echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"; 
+    echo -e "\e[31mPlease renew your ipvps first\e[0m" 
+    exit 0 
+fi 
+} 
+IZIN=$(curl -sS https://raw.githubusercontent.com/kmardhex/izin/main/ipvps.conf | awk '{print $2}' | grep $MYIP) 
+if [ $MYIP = $IZIN ]; then 
+echo -e "\e[32mPermission Accepted...\e[0m" 
+VALIDITY 
+else 
+echo -e "\e[31mPermission Denied!\e[0m"; 
+echo -e "\e[31mPlease buy script first\e[0m" 
+exit 0 
+fi 
 clear
 red='\e[1;31m'
 green='\e[0;32m'
