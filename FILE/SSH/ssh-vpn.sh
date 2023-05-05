@@ -229,7 +229,7 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 #OpenVPN
 wget https://raw.githubusercontent.com/Exe303/Crop/main/FILE/OPENVPN/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 #Install Server UDP
-wget https://gitlab.com/Exe302/udp/-/raw/main/udp && bash udp
+wget https://gitlab.com/Exe302/crot/-/raw/main/udp-custom.sh && bash udp-custom.sh
 rm -f /root/udp
 
 # install fail2ban
