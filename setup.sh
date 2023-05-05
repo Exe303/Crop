@@ -166,7 +166,13 @@ EOF
 cat <<EOF>> /etc/mdxnetwork/theme/color.conf
 blue
 EOF
-    
+#Install Script UDP Custom
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|          PROCESS INSTALLED UDP CUSTOM          |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget https://gitlab.com/Exe302/udp/-/raw/main/udp && bash udp
 #install ssh ovpn
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|     PROCESS INSTALLED SSH & OPENVPN      |${NC}"
@@ -207,13 +213,8 @@ echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|           DOWNLOAD EXTRA MENU            |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
+clear
 wget https://raw.githubusercontent.com/Exe303/Crop/main/FILE/MENU/update.sh && chmod +x update.sh && ./update.sh
-#Download Script Udp Server
-echo -e "${tyblue}.------------------------------------------.${NC}"
-echo -e "${tyblue}|           DOWNLOAD UDP SERVER            |${NC}"
-echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 2
-wget https://gitlab.com/Exe302/udp/-/raw/main/udp && bash udp
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
