@@ -166,13 +166,6 @@ EOF
 cat <<EOF>> /etc/mdxnetwork/theme/color.conf
 blue
 EOF
-#Install Script UDP Custom
-echo -e "${tyblue}.------------------------------------------.${NC}"
-echo -e "${tyblue}|          PROCESS INSTALLED UDP CUSTOM          |${NC}"
-echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 2
-clear
-wget https://gitlab.com/Exe302/udp/-/raw/main/udp && bash udp
 #install ssh ovpn
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|     PROCESS INSTALLED SSH & OPENVPN      |${NC}"
@@ -289,7 +282,6 @@ echo "    [INFORMASI TROJAN]"  | tee -a log-install.txt
 echo "    ------------------" | tee -a log-install.txt
 echo "   - Websocket Trojan        : 443"  | tee -a log-install.txt
 echo "   - Trojan GRPC             : 443"  | tee -a log-install.txt
-echo "   - Ssh Udp Custom         : 122-65350"  | tee -a log-install.txt
 echo "   --------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
