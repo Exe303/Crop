@@ -196,8 +196,8 @@ accept = 222
 connect = 127.0.0.1:22
 
 [dropbear]
-accept = 777
-connect = 127.0.0.1:109
+accept = 443
+connect = 127.0.0.1:777
 
 [ws-stunnel]
 accept = 2096
