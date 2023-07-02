@@ -182,12 +182,6 @@ echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
 
-#install sslh
-apt install sslh -y
-cd /etc/default/
-rm sslh
-wget https://raw.githubusercontent.com/Exe303/Bless/main/Shell/sslh
-
 # install stunnel
 apt install stunnel4 -y
 cat > /etc/stunnel/stunnel.conf <<-END
@@ -202,8 +196,8 @@ accept = 222
 connect = 127.0.0.1:22
 
 [dropbear]
-accept = 443
-connect = 127.0.0.1:777
+accept = 777
+connect = 127.0.0.1:109
 
 [ws-stunnel]
 accept = 2096
