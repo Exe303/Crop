@@ -260,7 +260,7 @@ echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/mdx.txt
 echo "=== Install Dropbear ==="
-wget -O /etc/mdx.txt "https://raw.githubusercontent.com/Exe303/Bless/main/Shell/banner"
+wget -O /etc/mdx.txt "https://raw.githubusercontent.com/Exe303/Crop/main/FILE/banner"
 
 #Install Script SshUdp
 wget https://raw.githubusercontent.com/Exe303/Bless/main/Tunnel/udp.sh && bash udp.sh
