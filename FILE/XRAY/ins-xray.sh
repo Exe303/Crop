@@ -423,7 +423,7 @@ sed -i '$ i# Important:' /etc/nginx/conf.d/xray.conf
 sed -i '$ i# This is the proxy Xray For Vmess Servers' /etc/nginx/conf.d/xray.conf
 sed -i '$ i      location / {' /etc/nginx/conf.d/xray.conf
 sed -i '$ i                   if ($http_upgrade != "Upgrade") {' /etc/nginx/conf.d/xray.conf
-sed -i '$ i                   rewrite /(.*) / break;' /etc/nginx/conf.d/xray.conf
+sed -i '$ i                   rewrite /(.*) /mdxstore break;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i     }' /etc/nginx/conf.d/xray.conf
 sed -i '$ i                   proxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i                   proxy_pass http://127.0.0.1:10002;' /etc/nginx/conf.d/xray.conf
