@@ -8,7 +8,7 @@ RED="\033[0;31m"
 COLOR1="$(cat /etc/mdxnetwork/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
 COLBG1="$(cat /etc/mdxnetwork/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')" 
 WH='\033[1;37m'                   
-###########- MDX  NETWORK-##########
+###########- MDX NETWORK-##########
 function addssh(){
 clear
 domen=`cat /etc/xray/domain`
@@ -478,9 +478,9 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{print $1}'`
 
 
-Login=zenhost-`</dev/urandom tr -dc X-Z0-9 | head -c4`
+Login=mdxcloud-`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hari="1"
-Pass=1
+Pass=trial
 echo Ping Host &> /dev/null
 echo Create Akun: $Login &> /dev/null
 sleep 0.5
