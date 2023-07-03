@@ -12,8 +12,6 @@ WH='\033[1;37m'
 function addssh(){
 clear
 domen=`cat /etc/xray/domain`
-NS=$(cat /etc/slowdns/infons)
-PUB=$(cat /root/server.pub)
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
