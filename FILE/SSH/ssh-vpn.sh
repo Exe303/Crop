@@ -257,7 +257,7 @@ echo "=== Install Dropbear ==="
 wget -O /etc/mdx.txt "https://raw.githubusercontent.com/Exe303/Crop/main/FILE/banner"
 
 #Install Script SshUdp
-wget https://raw.githubusercontent.com/Exe303/Bless/main/Tunnel/udp.sh && bash udp.sh
+#wget https://raw.githubusercontent.com/Exe303/Bless/main/Tunnel/udp.sh && bash udp.sh
 
 # download script
 cd /usr/bin
