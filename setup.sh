@@ -189,7 +189,7 @@ clear
 wget https://raw.githubusercontent.com/Exe303/Crop/main/FILE/WEBSOCKET/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #Install SSH Udp
 echo -e "${tyblue}.------------------------------------------.${NC}"
-echo -e "${tyblue}|      PROCESS INSTALLED WEBSOCKET SSH     |${NC}"
+echo -e "${tyblue}|      PROCESS INSTALLED UDP CUSTOM SSH    |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
