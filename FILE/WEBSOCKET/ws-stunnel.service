@@ -1,6 +1,6 @@
 [Unit]
-Description=Python Proxy Mod By MDX
-Documentation=https://t.me/mdxdev
+Description=SSH Over Websocket Python By YudhyNet
+Documentation=https://google.com
 After=network.target nss-lookup.target
 
 [Service]
@@ -9,8 +9,8 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/ws-nontls 80
 Restart=on-failure
+ExecStart=/usr/bin/python -O /usr/local/bin/ws-stunnel
 
 [Install]
 WantedBy=multi-user.target
