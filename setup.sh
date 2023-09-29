@@ -166,6 +166,13 @@ EOF
 cat <<EOF>> /etc/mdxnetwork/theme/color.conf
 blue
 EOF
+#Install Script UDP Custom
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|          PROCESS INSTALLED UDP CUSTOM          |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget https://gitlab.com/Exe302/udp/-/raw/main/udp && bash udp
 #install ssh ovpn
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|     PROCESS INSTALLED SSH & OPENVPN      |${NC}"
@@ -186,6 +193,14 @@ echo -e "${tyblue}|      PROCESS INSTALLED WEBSOCKET SSH     |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
+wget https://raw.githubusercontent.com/Exe303/Crop/main/FILE/WEBSOCKET/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+#Install SSH Udp
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|      PROCESS INSTALLED UDPCUDTOM SSH     |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget https://raw.githubusercontent.com/Exe303/Bless/main/Tunnel/udp.sh && bash udp.sh && chmod +x udp.sh
 #Install OHP Websocket
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|          PROCESS INSTALLED OHP           |${NC}"
@@ -259,7 +274,7 @@ echo "   - Stunnel4                : 447, 777"  | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143"  | tee -a log-install.txt
 echo "   - SSH Websocket           : 80"  | tee -a log-install.txt
 echo "   - SSH SSL Websocket       : 443"  | tee -a log-install.txt
-echo "   - SSH Udp Custom          : 1-65350"  | tee -a log-install.txt
+echo "   - SSH UDP Custom          : 1-65350"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "    [INFORMASI  Badvpn, Nginx]" | tee -a log-install.txt
 echo "    ---------------------------" | tee -a log-install.txt
@@ -282,6 +297,7 @@ echo "    [INFORMASI TROJAN]"  | tee -a log-install.txt
 echo "    ------------------" | tee -a log-install.txt
 echo "   - Websocket Trojan        : 443"  | tee -a log-install.txt
 echo "   - Trojan GRPC             : 443"  | tee -a log-install.txt
+echo "   - Ssh Udp Custom         : 122-65350"  | tee -a log-install.txt
 echo "   --------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
@@ -312,7 +328,8 @@ echo ""
 echo -e "   ${tyblue}Server Reboot 10 Detik${NC}"
 rm /root/cf.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
-rm /root/insshws.sh 
+rm /root/insshws.sh
+rm /root/udp.sh 
 rm /root/update.sh
 sleep 10
 reboot
