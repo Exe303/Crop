@@ -112,6 +112,7 @@ echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}$db"  | tee -a /etc/log-cr
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}$portsshws"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}$wsssl"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}$ssl"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC  ${WH}UDPCUSTOM  ${COLOR1}: ${WH}1-65350"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
@@ -137,6 +138,7 @@ echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}$db"  | tee -a /etc/log-cr
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}$portsshws"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}$wsssl"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}$ssl"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC  ${WH}UDPCUSTOM  ${COLOR1}: ${WH}1-65350"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
@@ -507,6 +509,7 @@ echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}$db"
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}$portsshws" 
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}$wsssl" 
 echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}$ssl"
+echo -e "$COLOR1 $NC  ${WH}UDPCUSTOM  ${COLOR1}: ${WH}1-65350"
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -534,6 +537,7 @@ echo -e "$COLOR1 $NC  ${WH}Dropbear   ${COLOR1}: ${WH}$db"
 echo -e "$COLOR1 $NC  ${WH}SSH-WS     ${COLOR1}: ${WH}$portsshws" 
 echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}$wsssl" 
 echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}$ssl" 
+echo -e "$COLOR1 $NC  ${WH}UDPCUSTOM  ${COLOR1}: ${WH}1-65350"
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
