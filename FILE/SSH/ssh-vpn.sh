@@ -1,5 +1,5 @@
 #!/bin/bash
-# By MDX
+# ===================MdxcloudNet====================
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ipinfo.io/ip);
@@ -42,7 +42,9 @@ END
 
 # nano /etc/rc.local
 cat > /etc/rc.local <<-END
-
+#!/bin/sh -e
+# rc.local
+# By default this script does nothing.
 exit 0
 END
 
@@ -161,7 +163,6 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 # setting port ssh
 cd
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g'
-
 # /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 500' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 40000' /etc/ssh/sshd_config
@@ -171,15 +172,15 @@ sed -i '/Port 22/a Port 200' /etc/ssh/sshd_config
 sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 
-# install dropbear
 echo "=== Install Dropbear ==="
-apt -y install dropbear
+# install dropbear
+#apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 69"/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_BANNER="/etc/mdx.txt/g' /etc/mdx.txt
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 50000 -p 109 -p 110 -p 69"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
+/etc/init.d/ssh restart
 /etc/init.d/dropbear restart
 
 # install stunnel
@@ -196,8 +197,8 @@ accept = 222
 connect = 127.0.0.1:22
 
 [dropbear]
-accept = 443
-connect = 127.0.0.1:777
+accept = 777
+connect = 127.0.0.1:109
 
 [ws-stunnel]
 accept = 2096
@@ -252,13 +253,13 @@ echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
-# banner /etc/mdx.txt
-echo "=== Install Dropbear ==="
-wget -O /etc/mdx.txt "https://raw.githubusercontent.com/Exe303/Crop/main/FILE/banner"
-
-#Install Script SshUdp
-#wget https://raw.githubusercontent.com/Exe303/Bless/main/Tunnel/udp.sh && bash udp.sh
-#chmod +x udp.sh
+# banner /etc/issue.net
+sleep 1
+echo -e "[ ${green}INFO$NC ] Settings banner"
+wget -q -O /etc/issue.net "https://raw.githubusercontent.com/Exe303/Crop/main/FILE/issue.net"
+chmod +x /etc/issue.net
+echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # download script
 cd /usr/bin
@@ -269,6 +270,7 @@ chmod +x speedtest
 chmod +x xp
 chmod +x auto-set
 cd
+
 
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
@@ -298,6 +300,12 @@ if dpkg -s unscd >/dev/null 2>&1; then
 apt -y remove --purge unscd >/dev/null 2>&1
 fi
 
+# apt-get -y --purge remove samba* >/dev/null 2>&1
+# apt-get -y --purge remove apache2* >/dev/null 2>&1
+# apt-get -y --purge remove bind9* >/dev/null 2>&1
+# apt-get -y remove sendmail* >/dev/null 2>&1
+# apt autoremove -y >/dev/null 2>&1
+# finishing
 cd
 chown -R www-data:www-data /home/vps/public_html
 sleep 1
@@ -321,6 +329,9 @@ echo -e "[ ${green}ok${NC} ] Restarting fail2ban "
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting stunnel4 "
 /etc/init.d/vnstat restart >/dev/null 2>&1
+#sleep 1
+#echo -e "[ ${green}ok${NC} ] Restarting vnstat "
+#/etc/init.d/squid restart >/dev/null 2>&1
 
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500
@@ -334,10 +345,11 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 history -c
 echo "unset HISTFILE" >> /etc/profile
 
+
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
 rm -f /root/bbr.sh
-rm -f /root/udp.sh
 
+# finihsing
 clear
