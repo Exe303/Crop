@@ -187,6 +187,13 @@ echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Exe303/Crop/main/FILE/WEBSOCKET/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+#Install SSH Udp
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|      PROCESS INSTALLED WEBSOCKET SSH     |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget https://raw.githubusercontent.com/Exe303/Bless/main/Tunnel/udp.sh && bash udp.sh && chmod +x udp.sh
 #Install OHP Websocket
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|          PROCESS INSTALLED OHP           |${NC}"
