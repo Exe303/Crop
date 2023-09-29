@@ -267,6 +267,7 @@ echo "   - Stunnel4                : 447, 777"  | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143"  | tee -a log-install.txt
 echo "   - SSH Websocket           : 80"  | tee -a log-install.txt
 echo "   - SSH SSL Websocket       : 443"  | tee -a log-install.txt
+echo "   - SSH Udp Custom          : 1-65350"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "    [INFORMASI  Badvpn, Nginx]" | tee -a log-install.txt
 echo "    ---------------------------" | tee -a log-install.txt
