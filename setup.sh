@@ -18,7 +18,7 @@ VALIDITY () {
     exit 0 
 fi 
 } 
-IZIN=$(curl -sS https://raw.githubusercontent.com/kmardhex/izin/main/ipvps.conf | awk '{print $2}' | grep $MYIP) 
+IZIN=$(curl -sS https://raw.githubusercontent.com/Exe303/izin/main/ipvps.conf | awk '{print $2}' | grep $MYIP) 
 if [ $MYIP = $IZIN ]; then 
 echo -e "\e[32mPermission Accepted...\e[0m" 
 VALIDITY 
@@ -186,13 +186,6 @@ echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Exe303/Crop/main/FILE/WEBSOCKET/insshws.sh && chmod +x insshws.sh && ./insshws.sh
-#Install SSH Udp
-echo -e "${tyblue}.------------------------------------------.${NC}"
-echo -e "${tyblue}|      PROCESS INSTALLED UDPCUSTOM SSH     |${NC}"
-echo -e "${tyblue}'------------------------------------------'${NC}"
-sleep 2
-clear
-wget https://raw.githubusercontent.com/Exe303/Bless/main/Tunnel/udp.sh && bash udp.sh && chmod +x udp.sh
 #Install OHP Websocket
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|          PROCESS INSTALLED OHP           |${NC}"
