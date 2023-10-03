@@ -11,8 +11,8 @@ WH='\033[1;37m'
 ###########- MDX NETWORK-##########
 function addssh(){
 clear
-NS=$(cat /etc/slowdns/infons)
-PUB=$(cat /root/server.pub)
+#NS=$(cat /etc/slowdns/infons)
+#PUB=$(cat /root/server.pub)
 domen=`cat /etc/xray/domain`
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
