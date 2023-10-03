@@ -9,7 +9,7 @@ export MYIP=$(curl -sS ipv4.icanhazip.com)
 # // GETTING 
 VALIDITY () { 
     today=date -d "0 days" +"%Y-%m-%d" 
-    Exp1=$(curl -sS https://raw.githubusercontent.com/kmardhex/izin/main/ipvps.conf | grep $MYIP | awk '{print $3}') 
+    Exp1=$(curl -sS https://raw.githubusercontent.com/Exe303/izin/main/ipvps.conf | grep $MYIP | awk '{print $3}') 
     if [[ $today < $Exp1 ]]; then 
     echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m" 
     else 
