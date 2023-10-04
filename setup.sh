@@ -313,7 +313,6 @@ echo -e "   ${tyblue}Server Reboot 10 Detik${NC}"
 rm /root/cf.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/insshws.sh
-rm /root/udp.sh 
 rm /root/update.sh
 sleep 10
 reboot
