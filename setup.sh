@@ -166,6 +166,7 @@ EOF
 cat <<EOF>> /etc/mdxnetwork/theme/color.conf
 blue
 EOF
+#install ssh ovpn
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|     PROCESS INSTALLED SSH & OPENVPN      |${NC}"
 echo -e "${tyblue}'------------------------------------------'${NC}"
