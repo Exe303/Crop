@@ -11,8 +11,6 @@ WH='\033[1;37m'
 ###########- MDX NETWORK-##########
 function addssh(){
 clear
-#NS=$(cat /etc/slowdns/infons)
-#PUB=$(cat /root/server.pub)
 domen=`cat /etc/xray/domain`
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
@@ -116,8 +114,6 @@ echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}$wsssl"  | tee -a /etc/log
 echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}$ssl"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPCUSTOM  ${COLOR1}: ${WH}1-65350"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}NAME SERVER${COLOR1}: ${WH}${NS}"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}PUBLIC KEY ${COLOR1}: ${WH}${PUB}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}GET / HTTP/1.1[crlf]Host: $domen [crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]Connection: Keep-Alive[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
@@ -144,8 +140,6 @@ echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}$wsssl"  | tee -a /etc/log
 echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}$ssl"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPCUSTOM  ${COLOR1}: ${WH}1-65350"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}NAME SERVER${COLOR1}: ${WH}${NS}"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}PUBLIC KEY ${COLOR1}: ${WH}${PUB}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}GET / HTTP/1.1[crlf]Host: $domen [crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]Connection: Keep-Alive[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
@@ -517,8 +511,6 @@ echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}$wsssl"
 echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}$ssl"
 echo -e "$COLOR1 $NC  ${WH}UDPCUSTOM  ${COLOR1}: ${WH}1-65350"
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300"
-echo -e "$COLOR1 $NC  ${WH}NAME SERVER${COLOR1}: ${WH}${NS}"
-echo -e "$COLOR1 $NC  ${WH}PUBLIC KEY ${COLOR1}: ${WH}${PUB}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}GET / HTTP/1.1[crlf]Host: $domen [crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]Connection: Keep-Alive[crlf][crlf]${NC}"
@@ -547,8 +539,6 @@ echo -e "$COLOR1 $NC  ${WH}SSH-SSL-WS ${COLOR1}: ${WH}$wsssl"
 echo -e "$COLOR1 $NC  ${WH}SSL/TLS    ${COLOR1}: ${WH}$ssl"
 echo -e "$COLOR1 $NC  ${WH}UDPCUSTOM  ${COLOR1}: ${WH}1-65350"
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7300"
-echo -e "$COLOR1 $NC  ${WH}NAME SERVER${COLOR1}: ${WH}${NS}"
-echo -e "$COLOR1 $NC  ${WH}PUBLIC KEY ${COLOR1}: ${WH}${PUB}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  ${WH}GET / HTTP/1.1[crlf]Host: $domen [crlf]User-Agent: [ua][crlf]Upgrade: websocket[crlf][crlf]Connection: Keep-Alive[crlf][crlf]${NC}"
