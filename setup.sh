@@ -187,6 +187,13 @@ echo -e "${tyblue}'------------------------------------------'${NC}"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/Exe303/Crop/main/FILE/WEBSOCKET/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+#Install SSH UDP
+echo -e "${tyblue}.------------------------------------------.${NC}"
+echo -e "${tyblue}|      PROCESS INSTALLED SSH UDPCUSTOM     |${NC}"
+echo -e "${tyblue}'------------------------------------------'${NC}"
+sleep 2
+clear
+wget https://raw.githubusercontent.com/Exe303/Bless/main/Tunnel/udp.sh && bash udp.sh
 #Install OHP Websocket
 echo -e "${tyblue}.------------------------------------------.${NC}"
 echo -e "${tyblue}|          PROCESS INSTALLED OHP           |${NC}"
@@ -314,6 +321,7 @@ echo -e "   ${tyblue}Server Reboot 10 Detik${NC}"
 rm /root/cf.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/insshws.sh
+rm /root/udp.sh
 rm /root/update.sh
 sleep 10
 reboot
