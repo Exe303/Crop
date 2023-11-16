@@ -9,7 +9,7 @@ export MYIP=$(curl -sS ipv4.icanhazip.com)
 # // GETTING 
 VALIDITY () { 
     today=date -d "0 days" +"%Y-%m-%d" 
-    Exp1=$(curl -sS https://raw.githubusercontent.com/kmardhex/izin/main/ipvps.conf | grep $MYIP | awk '{print $3}') 
+    Exp1=$(curl -sS https://raw.githubusercontent.com/Exe303/izin/main/ipvps.conf | grep $MYIP | awk '{print $3}') 
     if [[ $today < $Exp1 ]]; then 
     echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m" 
     else 
@@ -18,7 +18,7 @@ VALIDITY () {
     exit 0 
 fi 
 } 
-IZIN=$(curl -sS https://raw.githubusercontent.com/kmardhex/izin/main/ipvps.conf | awk '{print $2}' | grep $MYIP) 
+IZIN=$(curl -sS https://raw.githubusercontent.com/Exe303/izin/main/ipvps.conf | awk '{print $2}' | grep $MYIP) 
 if [ $MYIP = $IZIN ]; then 
 echo -e "\e[32mPermission Accepted...\e[0m" 
 VALIDITY 
