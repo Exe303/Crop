@@ -290,7 +290,7 @@ echo "    ------------------" | tee -a log-install.txt
 echo "   - Websocket Trojan        : 443"  | tee -a log-install.txt
 echo "   - Trojan GRPC             : 443"  | tee -a log-install.txt
 echo "   - Trojan GFW              : 8443"  | tee -a log-install.txt
-echo "   - Ssh Udp Custom         : 1-65350"  | tee -a log-install.txt
+echo "   - Ssh Udp Custom          : 1-65350"  | tee -a log-install.txt
 echo "   --------------------------------------------------------------" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
