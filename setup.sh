@@ -65,7 +65,7 @@ echo -e "[ ${green}INFO${NC} ] BY KANG MARDHEX"
 sleep 1
 echo -e "[ ${green}INFO${NC} ] WWW.MDXCLOUD.NET"
 sleep 1
-echo -e "[ ${green}INFO${NC} ] https://t.me/onevpn"
+echo -e "[ ${green}INFO${NC} ] https://t.me/mDx_Dev"
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Whatsapp : 085233695295"
 sleep 1
