@@ -67,7 +67,7 @@ echo -e "[ ${green}INFO${NC} ] WWW.MDXCLOUD.NET"
 sleep 1
 echo -e "[ ${green}INFO${NC} ] https://t.me/mdxlovers"
 sleep 1
-echo -e "[ ${green}INFO${NC} ] Whatsapp : 085233695295"
+echo -e "[ ${green}INFO${NC} ] Whatsapp : 081916333862"
 sleep 1
 
 secs_to_human() {
